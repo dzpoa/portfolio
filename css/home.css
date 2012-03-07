@@ -1,0 +1,262 @@
+	body {
+		background-color: #9D9B86;
+		margin: 0px;
+		color: #000;
+	}
+	
+	#container {
+		background-color: white;
+		width: 800px;
+		margin-left: auto;
+		margin-right: auto;
+		padding: 8px 0px 8px 0px;
+		height: auto !important;
+		margin: 0 auto;
+	}
+	
+	#top {
+		background-color: #827259;
+		width: 784px;
+		height: 120px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	#title {
+		margin: 0px;
+		color: white;
+		font-size: 46px;
+		padding: 25px 0 0 20px;
+		text-align: normal;
+	}
+	
+	.kaushan {
+		font-family: 'Kaushan Script';
+	}
+	
+	h1, h3 {
+		color: #827259;
+		padding-left: 30px;
+		clear: both;
+	}
+	
+	.lorem {
+		line-height:150%;
+		font-family: 'Puritan';
+		text-indent: 50px;
+		padding: 0 30px 0 10px;
+	}
+	
+	.tools {
+		line-height:150%;
+		font-family: 'Puritan';
+		margin-left: 50px;
+	}
+	
+	p {
+		text-align: justify;
+	}
+	
+	#menu-bar {
+		width: 784px;
+		height: 53px;
+		margin-left: auto;
+		margin-right: auto;
+		background-color: #333;
+	}
+	
+	.menu {
+		font-family: 'Kaushan Script';
+		font-size: 23px;
+	}
+	
+	.menu ul {
+		padding: 0;
+		margin: 0;
+	}
+	
+	.menu ul li {
+		list-style: none;
+		float: left;
+	}
+	
+	.menu ul li a {
+		float: left;
+		text-decoration: none;
+		color: #fff;
+		padding: 10px 13px;
+	}
+	
+	.menu ul li a:visited {
+		color: #fff;
+	}
+	
+	.menu ul li a:hover {
+		color: #fff;
+		background-color: #9D9B86;
+	}
+	
+	#graphs {
+		overflow: hidden;
+	}
+	
+	#graphs div {
+		float: left;
+		width: 50%;
+	}
+	
+	#graphs p {
+		text-align: center;
+	}
+	
+	#loading {
+		background: url(../img/loading.gif) no-repeat center center;
+		width: 16px;
+		height: 16px;
+	}
+	
+	.tooltipbox {
+		font-family: 'Puritan';
+	}
+	
+	.tooltip.technology, .tooltip.category, .tooltip.firm, .tooltip.year {
+		border-bottom: 1px dotted #000000;
+	}
+	
+	.tooltip:hover {
+		cursor: pointer;
+	}
+	
+	#contact {
+		width: 650px;
+		margin-left: 50px;
+	}
+	
+	#contact fieldset {
+		border: medium none;
+		margin: 10px 0;
+		padding: 0;
+	}
+	
+	#contact label {
+		font-family: 'Puritan';
+		display: block;
+		float: left;
+		width: 100px;
+		margin-left: 10px;
+		margin-bottom: 0px;
+		color: white;
+		background-color: #827259;
+		text-align: center;
+		padding: 5px 0;
+	}
+	
+	#contact #label-message {
+		float: none;
+		width: 500px;
+	}
+	
+	#contact #label-captcha {
+		float: none;
+		width: 300px;
+	}
+	
+	#contact label:not(#label-message):not(#label-captcha) {
+		border-radius: 3px 0px 0px 3px;
+	}
+	
+	#contact #label-message, #label-captcha {
+		border-radius: 3px 3px 0px 0px;
+	}
+	
+	#contact input[type="text"], textarea {
+		margin-left: 10px;
+		background: none repeat scroll 0 0 #FCFCFC;
+		border: 1px solid #C9C9C9;
+		box-shadow: 0 1px 6px rgba(0, 0, 0, 0.15) inset;
+		color: #333;
+		font: 12px 'Purtitan';
+		margin-left: 0px;
+		padding: 6px;
+		width: 280px;
+		height: 14px;
+		margin-top: 0px;
+		font-size:100%;
+	}
+	
+	#contact textarea {
+		width: 486px;
+		height: 200px;
+		margin-left: 10px;
+		resize: none;
+		overflow:hidden;
+		overflow-y: hidden;
+		overflow-x: hidden;
+	}
+	
+	#captcha-refresh {
+		width: 250px;
+		height: 30px;
+		margin: 0 0 10px 10px;
+	}
+	
+	#captcha-image {
+		float: left;
+		width: 150px;
+		height: 30px;
+		text-align: center;
+	}
+	
+	.captcha-image-loading {
+		margin-top: 7px;
+	}
+	
+	#contact #captcha-field {
+		width: 286px;
+		margin-left: 10px;
+	}
+	
+	#contact #refresh {
+		cursor: pointer;
+		margin: 7px 0 0 15px;
+	}
+	
+	#contact #send-sending {
+		width: 600px;
+		height: 28px;
+		margin: 0 0 10px 10px;
+	}
+	
+	#contact #send {
+		background-color: #827259;
+		font: 15px 'Puritan';
+		color: #FFFFFF;
+		border: medium none;
+		border-radius: 3px 3px 3px 3px;
+		cursor: pointer;
+		display: block;
+		padding: 5px 20px 6px 20px;
+		width: 30px;
+		float: left;
+	}
+	
+	#contact #sending {
+		display: none;
+		float: left;
+		margin: 5px 27px 0 27px;
+	}
+	
+	#contact #feedback {
+		font: 15px 'Purtitan';
+		float: left;
+		margin: 6px 0 0 10px
+	}
+	
+	/*
+	this sucks, but it seems that google fonts are interpreted in random sizes by different browsers :/
+	*/
+	#m-about-me {width: 91px;}
+	#m-about-site {width: 131px;}
+	#m-previous-projects {width: 159px;}
+	#m-summary {width: 195px;}
+	#m-contact {width: 78px;}
