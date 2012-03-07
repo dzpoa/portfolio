@@ -260,9 +260,6 @@
 		margin: 6px 0 0 10px
 	}
 	
-	/*
-	this sucks, but it seems that google fonts are interpreted in random sizes by different browsers
-	*/
 	#m-about-me {width: 91px;}
 	#m-about-site {width: 131px;}
 	#m-previous-projects {width: 159px;}
