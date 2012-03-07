@@ -1,0 +1,7 @@
+before install, do the following:
+
+1) edit admin_email and encryption_key in application/config/config.php
+2) edit application/config/database.php
+3) download jpGraph and put in a folder called jpgraph in the root directory.
+
+you can check the database model opening the file model.mwb in mysql workbench.
