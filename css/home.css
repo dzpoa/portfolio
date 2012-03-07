@@ -47,6 +47,14 @@
 		padding: 0 30px 0 10px;
 	}
 	
+	.lorem a {
+		color: #000;
+	}
+	
+	.lorem a:visited {
+		color: #000;
+	}
+	
 	.tools {
 		line-height:150%;
 		font-family: 'Puritan';
