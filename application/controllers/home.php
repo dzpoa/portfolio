@@ -4,48 +4,48 @@ class Home extends CI_Controller {
 
 	function __construct()
 	{	
-        parent::__construct();
-    }
-    
-    public function index()
+		parent::__construct();
+	}
+	
+	public function index()
 	{
 		//CSRF protection (Cross-Site Request Forgeries). im not using CI CSRF built in
 		$this->session->set_userdata('token', md5(uniqid(rand(), TRUE)));
-		
+	
 		$clients = array();
-		
+	
 		$client = new Client();
 		$client->distinct();
 		$client->order_by("name", "asc");
 		$client->get();
-		
+	
 		foreach ($client as $c)
 		{
 			$projects = array();
 			$c->project->get();
-			
+		
 			foreach($c->project as $p)
 			{
 				$techs = array();
 				$p->technology->get();
-				
+		
 				foreach($p->technology as $t)
 				{
 					$t->category->get();
-					
+		
 					$techs[] = array("id" => $t->id, "name" => $t->name, "category_id" => $t->category->id, "category_name" => $t->category->name);
 				}
-				
+		
 				$projects[] = array("name" => ($p->name=="" ? "(no specific name)" : $p->name), "year" => $p->year, "description" => $p->description, "technologies" => $techs);
 			}
-			
+		
 			$c->firm->get();
 			$clients[] = array(
-						"id" => $c->id,
-						"name" => $c->name,
-						"url" => anchor($c->url, $c->name, "target='blank'"),
-						"firm" => anchor($c->firm->url, $c->firm->name, "target='blank'") . " ({$c->firm->branch})",
-						"projects" => $projects
+							"id" => $c->id,
+							"name" => $c->name,
+							"url" => anchor($c->url, $c->name, "target='blank'"),
+							"firm" => anchor($c->firm->url, $c->firm->name, "target='blank'") . " ({$c->firm->branch})",
+							"projects" => $projects
 			);
 		}
 		$data['clients'] = $clients;
@@ -57,7 +57,7 @@ class Home extends CI_Controller {
 		
 		$tool = new Tool();
 		$tool->get();
-			
+		
 		$tools = array();
 		foreach($tool as $t)
 		{
@@ -66,16 +66,16 @@ class Home extends CI_Controller {
 		$data['tools'] = $tools;
 		
 		$vals = array(
-			'img_path' => './captcha/',
-			'img_url' => base_url() . "captcha/",
-			'expiration' => 7200
+					'img_path' => './captcha/',
+					'img_url' => base_url() . "captcha/",
+					'expiration' => 7200
 		);	
 		$captcha = create_captcha($vals);
 		
 		$istring = array(
-			'captcha_time' => $captcha['time'],
-			'ip_address' => $this->input->ip_address(),
-			'word' => $captcha['word']
+					'captcha_time' => $captcha['time'],
+					'ip_address' => $this->input->ip_address(),
+					'word' => $captcha['word']
 		);
 		$sql = $this->db->insert_string('captcha', $istring);
 		$this->db->query($sql);

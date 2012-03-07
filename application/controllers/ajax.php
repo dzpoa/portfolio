@@ -3,10 +3,10 @@
 class Ajax extends CI_Controller {
 
 	function __construct() {
-		
-        parent::__construct();
-    }
-
+	
+		parent::__construct();
+	}
+	
 	function index()
 	{
 	}
@@ -85,7 +85,7 @@ class Ajax extends CI_Controller {
 	function contact()
 	{
 		$this->load->library('form_validation');
-		
+	
 		// First, delete old captchas
 		$expiration = time() - $this->config->item('sess_expiration');
 		$sql = "
@@ -96,7 +96,7 @@ class Ajax extends CI_Controller {
 					captcha_time < {$expiration}
 		";
 		$this->db->query($sql);
-		
+	
 		// Then see if a captcha exists:
 		$sql = "
 				SELECT
@@ -125,12 +125,12 @@ class Ajax extends CI_Controller {
 		else
 		{
 			postFilter();
-			
+		
 			$this->form_validation->set_rules('name', '', 'trim|required|min_length[3]|max_length[250]');
 			$this->form_validation->set_rules('email', '', 'trim|required|valid_email|min_length[5]|max_length[250]');
 			$this->form_validation->set_rules('company', '', 'trim|min_length[3]|max_length[250]');
 			$this->form_validation->set_rules('message', '', 'required|min_length[15]|max_length[5000]');
-	
+		
 			if ($this->form_validation->run() == FALSE)
 			{
 				$return = array('error' => 1, 'feedback' => 'Enable Javascript Please.');
@@ -150,15 +150,15 @@ class Ajax extends CI_Controller {
 				";
 				$binds = array($this->input->post('name'), $this->input->post('email'), $this->input->post('company'), $this->input->post('message'));
 				$this->db->query($sql, $binds);
-				
+			
 				$this->load->library('email');
-				
+			
 				$config['mailtype'] = 'html';
 				$this->email->initialize($config);
-				
+			
 				$this->email->from($this->config->item('admin_email'), 'dz.com');
 				$this->email->to($this->config->item('admin_email'));
-				
+			
 				$this->email->subject("New Message ({$this->input->post('email')})");
 				$message = "
 							Name: {$this->input->post('name')}<br/>
@@ -168,7 +168,7 @@ class Ajax extends CI_Controller {
 							Date: " . date('Y-m-d H:m:i') . "
 				";
 				$this->email->message($message);
-				
+			
 				if (!$this->email->send())
 				{
 					$return = array('error' => 1, 'feedback' => 'An error occured while sending your email. Try again later please.');
