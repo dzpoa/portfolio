@@ -448,7 +448,7 @@ INSERT INTO `tool` (`id`, `description`) VALUES
 (6, 'wTooltip, a Jquery Tooltip Plugin'),
 (7, 'jSlideto, an animated scrollto effect jQuery plugin'),
 (8, 'jpGraph, a PHP graph drawing library'),
-(9, 'Google Web Fonts, a collection of Open Source fonts provided by Google');
+(9, 'Google Web Fonts, a collection of Open Source fonts');
 
 --
 -- Constraints for dumped tables
