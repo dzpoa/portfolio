@@ -260,6 +260,18 @@
 		margin: 6px 0 0 10px
 	}
 	
+	#footer {
+		width: 100%;
+	}
+	
+	#footer p {
+		text-align: center;
+		font: 15px 'Puritan';
+	}
+	
+	/*
+	had to do this, because it seems that Google Fonts are interpreted with different sizes by each browser
+	*/
 	#m-about-me {width: 91px;}
 	#m-about-site {width: 131px;}
 	#m-previous-projects {width: 159px;}

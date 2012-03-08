@@ -135,6 +135,9 @@
 					</fieldset>
 				</form>
 			</div>
+			<div id="footer">
+				<p>Daniel Zander's Programming Portfolio [~$smarty.now|date_format:'%Y'~] &copy; ;)</p>
+			</div>
 		</div>
 	</body>
 </html>
