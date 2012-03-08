@@ -38,7 +38,7 @@ CREATE TABLE IF NOT EXISTS `about` (
 --
 
 INSERT INTO `about` (`id`, `me`, `site`) VALUES
-(1, 'Hi, my name is Daniel Zander, i''m Brazilian, naturalized german and a web developer for more than 10 years. I''m graduated in information systems by the University of Vale do Rio dos Sinos (Unisinos), and have worked in many web sites for important clients in Brasil.', 'I made this site with the proposal of showing my programming portfolio and, most important, my style of code. Feel free to download the source code <a href=''https://github.com/dzpoa/portfolio'' target=''_blank''>here</a> for analisys. The tools I used were:');
+(1, 'Hi, my name is Daniel Zander, i''m Brazilian, naturalized german and a web developer for more than 10 years. I''m graduated in information systems by the University of Vale do Rio dos Sinos (Unisinos), and have worked in many web sites for important clients in Brasil.', 'I made this site with the proposal of showing my programming portfolio and, most important, my style of code (as you can see i'm not a web designer). Feel free to download the source code <a href=''https://github.com/dzpoa/portfolio'' target=''_blank''>here</a> for analisys. The tools I used were:');
 
 -- --------------------------------------------------------
 
