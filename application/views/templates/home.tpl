@@ -1,7 +1,7 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
-		<meta charset="UTF-8">
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
 		<title>Daniel Zander's Programming Portfolio</title>
 		<link href='http://fonts.googleapis.com/css?family=Kaushan+Script|Puritan' rel='stylesheet' type='text/css'>
 		
@@ -17,6 +17,18 @@
 		<link rel="stylesheet" type="text/css" href="css/home.css" />
 		<link rel="stylesheet" type="text/css" href="css/jquery-ui-1.8.17.custom.css" />
 		<link rel="stylesheet" type="text/css" href="css/validationEngine.jquery.css" />
+		
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-29728296-1']);
+			_gaq.push(['_trackPageview']);
+			
+			(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
 	</head>
 	<body>
 		<div id="container">
@@ -78,22 +90,22 @@
 			<div id="graphs" style="align='center'">
 				<div>
 					<h3 class="kaushan">Technologies</h3>
-					<p><img src="jpgraph/technology" /></p>
+					<p><img src="jpgraph/technology" alt="Technologies" /></p>
 				</div>
 				
 				<div>
 					<h3 class="kaushan">Categories</h3>
-					<p><img src="jpgraph/category" /></p>
+					<p><img src="jpgraph/category" alt="Categories" /></p>
 				</div>
 			
 				<div>
 					<h3 class="kaushan">Firms</h3>
-					<p><img src="jpgraph/firm" /></p>
+					<p><img src="jpgraph/firm" alt="Firms" /></p>
 				</div>
 				
 				<div>
 					<h3 class="kaushan">Years</h3>
-					<p><img src="jpgraph/year" /></p>
+					<p><img src="jpgraph/year" alt="Years" /></p>
 				</div>
 			</div>
 			
